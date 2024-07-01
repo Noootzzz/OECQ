@@ -1,0 +1,24 @@
+/* GRADIENT TITLE ANIMATION */
+@keyframes gradientAnim {
+    to {
+        background-position: -200%;
+    }
+}
+/* LOGOS FLOATING ANIMATION */
+@keyframes logoMove {
+    0%,100%{
+        transform: translateY(0rem);
+    }
+    50% {
+        transform: translateY(-.5rem);
+    }
+}
+/* MAP MARKERS ANIMATION */
+@keyframes pulse {
+    100% {
+        opacity: 0;
+        transform: 
+        translate(-50%, -50%) 
+        scale(7);
+    }
+}

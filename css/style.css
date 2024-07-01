@@ -1,0 +1,722 @@
+/* VARIABLES IMPORT */
+@import url(./variables.css);
+/* HEADER IMPORT */
+@import url(./header.css);
+/* ANIMATIONS IMPORT */
+@import url(./animations.css);
+
+/* |---------------------------HOME---------------------------| */
+
+/* MAIN */
+#home {
+    width: 100%;
+    padding: 25vh 5vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+    background-color: var(--background);
+}
+/* TITLE */
+h1 {
+    color: var(--text);
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+h1 span {
+    background: var(--linearPrimaryAccent);
+    color: transparent;
+    font-size: 4rem;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 200%;
+    animation: gradientAnim 2s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+}
+
+#home section > h2, #about h2 {
+    margin: 3rem 0;
+    text-align: center;
+    background: var(--linearPrimaryAccent);
+    color: transparent;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* LOGOS SECTION */
+#home #logos {
+    width: 100%;
+    margin: 4rem 0 0 0;
+    padding: 2rem 0;
+    gap: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--non-changeable-secondary);
+}
+
+#home #logos img {
+    width: 15%;
+    background-color: var(--non-changeable-secondary);
+    animation: 3.3s logoMove ease-in-out infinite;
+}
+
+#home #logos img:nth-child(1) {
+    animation-delay: .5s;
+}
+
+#home #logos img:nth-child(2) {
+    animation-delay: 1.2s;
+}
+
+#home #logos img:nth-child(3) {
+    width: 10%;
+    animation-delay: 1.9s;
+}
+
+#home #logos img:nth-child(4) {
+    animation-delay: 2.6s;
+}
+
+#home #logos img:nth-child(5) {
+    animation-delay: 3.3s;
+}
+
+/* WHO SECTION */
+#home #who {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* PRESENTATION CARDS */
+#home #cards {
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+}
+
+#home #cards img {
+    width: 15%;
+}
+
+#home .card {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    box-shadow: 0 .5rem 1rem var(--shadow);
+    background-color: var(--background);
+    border: 2px solid var(--background);
+    transition: .2s;
+}
+
+#home .card-content h2 {
+    margin: 0 0 1rem 0;
+    color: var(--text);
+    font-weight: 500;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    transition: .2s;
+}
+
+#home .card:hover h2 {
+    color: var(--primary);
+}
+
+#home .card p {
+    padding: 2rem 5rem;
+    line-height: 2;
+    color: var(--text);
+}
+
+#home .card a {
+    padding: 1rem;
+    min-width: 30%;
+    background: var(--primary);
+    color: var(--background);
+    text-decoration: none;
+    font-weight: 200;
+    border: none;
+    border: 2px solid var(--primary);
+    text-align: center;
+    box-shadow: 0 5px 10px var(--shadow);
+    cursor: pointer;
+    transition: .2s;
+}
+
+#home .card a:hover {
+    background: transparent;
+    color: var(--text);
+    border: 2px solid var(--accent);
+    box-shadow: none;
+    transition: .2s;
+}
+
+#home .card:hover {
+    box-shadow: 0px var(--shadow);
+    transition: .2s;
+}
+
+#home .card .bottom {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+/* MISSIONS SECTION */
+#home #missions {
+    margin: 10vh 0;
+    width: 100%;
+    min-height: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--background);
+}
+
+
+#home #missions #missions-description {
+    width: 100%;
+    height: 100%;
+    padding: 0 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--text);
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#home #missions #missions-description p {
+    padding: 3rem 2rem 2rem 2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    box-shadow: 0px 5px 10px var(--shadow);
+}
+
+/* DETAILS */
+#home #missions details {
+    width: 80%;
+    margin: 0 auto ;
+    background-color: var(--background);
+    margin-bottom: .5rem;
+    overflow: hidden;
+}
+
+#home #missions summary {
+    padding: 1rem 1rem 1rem 2.2rem;
+    display: block;
+    position: relative;
+    background-color: var(--primary);
+    color: var(--background);
+    user-select: none;
+    cursor: pointer;    
+    letter-spacing: 2px;
+}
+
+#home #missions summary::before {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    content: '';
+    border-width: .6rem;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--accent);
+    transform: rotate(0);
+    transform-origin: .2rem 50%;
+    transition: .25s transform ease;
+}
+
+#home #missions details[open] > summary::before {
+    transform: rotate(90deg);
+}
+
+#home #missions details summary::-webkit-details-marker {
+    display: none;
+}
+
+/* FINANCE SECTION */
+#home #missions #finance {
+    height: 100%;
+    width: 100%;
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    color: var(--text);
+    font-size: 1.4rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+#home #missions #financial-organizations {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#home #missions #financial-organizations img {
+    width: 35%;
+    margin: 2rem 0 0 0;
+}
+
+#home #missions #finance #france, #home #missions #finance #europe {
+    width: 40%;
+    min-height: 35vh;
+    padding: 2rem;
+    box-shadow: 0px 5px 10px var(--shadow);
+    font-weight: 600;
+}
+
+/* QUOTE SECTION */
+#home #quotes {
+    width: 60rem;
+    margin: 2rem auto;
+    height: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--secondary);
+    overflow: auto;
+    box-shadow: inset 0px 5px 10px var(--shadow);
+}
+
+#home .quote {
+    margin: 5rem auto .5rem;
+    min-height: 10rem;
+    width: 80%;
+    display: grid;
+    place-items: center;
+    background-color: var(--background);
+    box-shadow: 0px 5px 10px var(--shadow);
+    transition: .2s;
+}
+
+#home .quote p {
+    padding: 0 2rem 2rem 2rem;
+    background-color: var(--background);
+    color: var(--text);
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+#home .quote img {
+    width: 90%;
+    height: 90%;
+    box-shadow: 0 10px 20px var(--shadow);
+}
+
+#home .quote .backImg {
+    width: 100px;
+    height: 100px;
+
+    display: grid;
+    place-items: center;
+    background: var(--linearPrimaryAccent);
+    transform: translateY(-3.5rem);
+    box-shadow: 0 .5rem 1rem var(--shadow);
+    transition: .2s;
+}
+
+#last-news .container small{
+    display: none;
+}
+
+/* |---------------------------ABOUT---------------------------| */
+#about {
+    padding: 5vh 5vw 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#about #map-locations, #about #map-locations #map-img {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#about #map-locations {
+    height: 80vh;
+}
+
+#about #map-img {
+    position: relative;
+}
+
+#about #map-locations img {
+    width: 100%;
+}
+
+#about .marker {
+    width: 0.7rem;
+    height: 0.7rem;
+    position: absolute;
+    background-color: var(--accent);
+    border-radius: 50%;
+}
+
+.marker::before {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: "";
+    background-color: var(--accent);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.marker span {
+    padding: .3rem .6rem;
+    left: 1.5rem;
+    top: 50%;
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
+    transform: translateY(-50%);
+    background-color: var(--non-changeable-black);
+    color: var(--non-changeable-white);
+    font-size: .9rem;
+    border: 2px solid var(--non-changeable-white);
+}
+
+#about .france {
+    top: 38%;
+    left: 7%;
+}
+#about .singapour {
+    top: 68%;
+    left: 56%;
+}
+
+/* PROJECT DETAILS */
+#about section {
+    height: auto;
+    width: 90%;
+    padding: 0 2vw;
+    margin: 5vh 0;
+}
+
+#about section:nth-child(1) {
+    margin: 5vh;
+}
+
+#about section p {
+    text-align: justify;
+    padding: 0 2rem;
+}
+
+#about p .word {
+    font-size: 2rem;   
+}
+
+/* TEAM DETAILS */
+#about #members {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+#about .member {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0.5rem 1rem var(--shadow);
+    padding: .5rem;
+}
+#about .member img {
+    width: 100%;
+}
+#about .member .member-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary);
+    width: 100%;
+}
+#about .member-infos h3{
+    font-size: 2em;
+    background-color: var(--secondary);
+}
+#about .member-infos h4{
+    font-size: 1.5em;
+    background-color: var(--secondary);
+}
+
+/* |---------------------------PUBLICATIONS---------------------------| */
+.container {
+    padding: 1.62rem 1rem;
+    width: 100%;
+    margin: 2rem auto;
+    min-height: 5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: .2s;
+}
+
+.content {
+    padding: 1rem 2rem;
+    height: 100%;
+    width: 140%;
+    position: relative;
+    color: var(--text);
+    font-size: 15px;
+    transition: .2s;
+}
+
+.container .right-section a {
+    width: 75%;
+    padding: 1rem 4rem;
+    background-color: var(--primary);
+    color: var(--background);
+    text-align: center;
+    border: 2px solid var(--primary);
+    text-transform: uppercase;
+    transition: .2s;
+}
+
+.content p {
+    margin: 1rem 0 0 0;
+    width: 90%;
+
+    font-weight: 300;
+}
+
+.content h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.container-arrow {
+    height: 0;
+    width: 0;
+    top: 1rem;
+    left: -.3rem;
+
+    position: absolute;
+
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-right: 1rem solid var(--primary);
+    transition: .2s;
+}
+
+.container:hover .container-arrow {
+    border-right: 0rem solid transparent;
+    border-left: 1rem solid var(--primary);
+    transition: .2s;
+} 
+
+.container small {
+    position: absolute;
+
+    transform: translateX(-7rem);
+    transition: .2s;
+}
+
+.container:hover{
+    transform: translateX(1rem);
+    box-shadow: 0 .5rem 1rem var(--shadow);
+    transition: .2s;
+}
+
+.container small {
+    transform: translateX(-8rem);
+    color: var(--primary);
+    transition: .2s;
+}
+
+.container a:hover  {
+    border: 2px solid var(--accent);
+    background: transparent;
+    color: var(--text);
+    box-shadow: none;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.container .right-section {
+    width: 100%;
+    min-height: 10rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.container .right-section h4 {
+    color: var(--text);
+    font-weight: 300;
+}
+
+/* PUBLICATION PAGE -> SEARCH */
+#search-publication {
+    padding: 25vh 15vw 0;
+}
+
+#search {
+    margin: 5rem auto 0rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--text);
+}
+
+#search label {
+    font-size: 1.6rem;
+}
+
+#search #search-bar {
+    margin: 2rem 0 0;
+    padding: 1rem;
+    width: 50%;
+
+    border-radius: 3px;
+    color: var(--primary);
+    border: 2px solid var(--text);
+    outline: none;
+}
+
+#search #search-bar:focus {
+    border-color: var(--primary);
+    outline: 2px solid var(--primary);
+}
+
+#error-message {
+    color: var(--error);
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-transform: capitalize;
+    display: none;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto 5rem;
+    background-color: var(--light-error);
+    border: 2px solid var(--error);
+}
+
+/* PUBLICATION PAGE -> TIMELINE */
+#timeline {
+    max-width: 65rem;
+    margin: 5rem auto;
+
+    position: relative;
+}
+
+#timeline::after {
+    top: 0;
+    left: 0;
+    width: .6rem;
+    height: 100%;
+
+    position: absolute;
+
+    content: "";
+    background-color: var(--primary);
+}
+
+.container small {
+    position: absolute;
+    color: var(--text);
+    transform: translateX(-7rem);
+    transition: .2s;
+}
+
+.container:hover small {
+    transform: translateX(-8rem);
+    color: var(--primary);
+    transition: .2s;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 5rem;
+    margin: 0rem 0 0 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--secondary);
+    color: var(--text);
+}
+
+footer p {
+    background-color: var(--secondary);
+}
+
+/* SVG BUTTON TO TOP */
+.arrowTop {
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0.5rem 1rem;
+
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+
+    display: none;
+
+    cursor: pointer;
+    z-index: 10;
+    transition: .2s;
+}
+
+.arrowTop path {
+    fill: var(--background);
+    stroke-width: .5rem;
+    stroke: var(--text);
+    transition: .2s;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 0px; 
+}
+
+#quotes::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track, #quotes::-webkit-scrollbar-track {
+    background-color: var(--background);
+}
+
+body::-webkit-scrollbar-thumb, #quotes::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+}

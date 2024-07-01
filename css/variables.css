@@ -1,0 +1,58 @@
+/* FONT IMPORT  */
+@import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* LIGHT THEME BODY VARIABLES*/
+body[data-theme="light"] {
+    --text: #212121;
+    --background: #ffffff;
+    --primary: #0028ad;
+    --secondary: #d4d6df;
+    --accent: #00ff00;
+
+    --error: #cc0033;
+    --light-error: #ffa8a8;
+
+    --non-changeable-white: #ffffff;
+    --non-changeable-black: #212121;
+    --non-changeable-secondary: #F2F4FB;
+
+    --shadow: rgba(0, 0, 0, 0.2);
+
+    --linearPrimarySecondary: linear-gradient(#0028ad, #b2b7cb);
+    --linearPrimaryAccent: linear-gradient(45deg, #0028ad, #00ff00);
+    --linearSecondaryAccent: linear-gradient(#b2b7cb, #00ff00);
+}
+
+/* DARK THEME BODY VARIABLES */
+body[data-theme="dark"] {
+    --text: #dedede;
+    --background: #000000;
+    --primary: #527aff;
+    --secondary: #1f253a;
+    --accent: #00ff00;
+
+    --error: #cc0033;
+    --light-error: #ffa8a8;
+
+    --non-changeable-white: #ffffff;
+    --non-changeable-black: #212121;
+    --non-changeable-secondary: #F2F4FB;
+
+    --shadow: rgba(36, 31, 31, 0.2);
+    
+    --linearPrimarySecondary: linear-gradient(#0028ad, #b2b7cb);
+    --linearPrimaryAccent: linear-gradient(45deg, #0028ad, #00ff00);
+    --linearSecondaryAccent: linear-gradient(#b2b7cb, #00ff00);
+}
+
+/* GLOBAL PARAMETERS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: "REM", sans-serif;
+    background-color: var(--background);
+}

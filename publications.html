@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publications</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body data-theme="light">
+    <!-- HEADER -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="publications.html">Publications</a></li>
+        </ul>
+      </nav>
+      <button type="button" id="darkmode">Eco'Theme</button>
+    </header>
+
+    <!-- SEARCH SECTION -->
+    <main id="search-publication">
+      <h1><span>Publications</span></h1>
+      <div id="search">
+        <label for="search-bar">Search by names</label>
+        <input type="search" id="search-bar" />
+      </div>
+      <!-- TIMELINE PUBLICATIONS SECTION -->
+      <div id="timeline">
+      </div>
+      <p id="error-message">Publication not found</p>        
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p class="copyright"></p>
+    </footer>
+
+    <!-- TO TOP BTN SVG -->
+    <svg
+      class="arrowTop"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 384 512"
+    >
+      <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free 
+    Copyright 2024 Fonticons, Inc.-->
+      <path
+        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5
+        32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 
+        32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+      />
+    </svg>
+
+    <!-- JAVASCRIPT IMPORTS -->
+    <!-- header swap on scroll -->
+    <script src="./js/header.js"></script>
+    <!-- search publication -->
+     <script src="./js/searchPublication.js"></script>
+    <!-- darkmode -->
+    <script src="./js/darkMode.js"></script>
+    <!-- datas reader -->
+    <script src="./js/datasPublicationsReader.js"></script>
+    <!-- to top button arrow -->
+    <script src="./js/toTopBtn.js"></script>
+    <!-- footer dynamic year -->
+    <script src="./js/date.js"></script>
+
+    <!-- lenis for smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <!-- smoothScroll using lenis -->
+    <script src="./js/smoothScroll.js"></script>
+  </body>
+</html>
