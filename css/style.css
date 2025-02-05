@@ -1,12 +1,74 @@
+/*
+  * Author: Nathan Boisleux 2024 *
+*/
 /* VARIABLES IMPORT */
 @import url(./variables.css);
 /* HEADER IMPORT */
 @import url(./header.css);
 /* ANIMATIONS IMPORT */
 @import url(./animations.css);
+/* RESPONSIVE */
+@import url(./responsive.css);
 
 /* |---------------------------HOME---------------------------| */
-
+#menu {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 1rem 0 0 1rem;
+    width: 100vw;
+}
+#menu img {
+    width: 25%;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    box-shadow: var(--bxs);
+}
+#menu-toggle {
+    padding: 1rem 2.5rem;
+    z-index: 30000;
+    background-color: var(--primary);
+    box-shadow: var(--bxs);
+    border: none;
+    color: var(--non-changeable-white);
+    cursor: pointer;
+    transition: var(--tr);
+}
+body #menu ul {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 9rem 1rem;
+    gap: 2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-height: 100vh;
+    width: 0vw;
+    z-index: 29999;
+    transition: var(--tr);
+    background-color: var(--background);
+    border-bottom: 2px solid var(--primary);
+}
+body #mobile-nav.active {
+    display: flex;
+    width: 100%;
+    transition: var(--tr);
+}
+body #mobile-nav li {
+    width: 10rem;   
+    text-align: center;
+    background-color: var(--primary);     
+    padding: 1rem 2rem;    
+    cursor: pointer;        
+}
+body #mobile-nav li a {
+    background-color: var(--primary);             
+    color: var(--non-changeable-white);
+}
 /* MAIN */
 #home {
     width: 100%;
@@ -20,11 +82,28 @@
     text-align: center;
     background-color: var(--background);
 }
+
+#home p {
+    font-size: 1.1em;
+}
+
+#home #missions summary {
+    font-size: 1.3em;
+}
+
+#home #last-news {
+    text-align: left;
+    width: 70vw;
+}
+
+#last-news .container small{
+    display: none;
+}
 /* TITLE */
 h1 {
     color: var(--text);
     text-align: center;
-    font-size: 4rem;
+    font-size: 4em;
     font-weight: 900;
     text-transform: uppercase;
 }
@@ -32,7 +111,7 @@ h1 {
 h1 span {
     background: var(--linearPrimaryAccent);
     color: transparent;
-    font-size: 4rem;
+    font-size: 1em;
     background-clip: text;
     -webkit-background-clip: text;
     background-size: 200%;
@@ -117,10 +196,10 @@ h1 span {
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
-    box-shadow: 0 .5rem 1rem var(--shadow);
+    box-shadow: var(--bxs);
     background-color: var(--background);
     border: 2px solid var(--background);
-    transition: .2s;
+    transition: var(--tr);
 }
 
 #home .card-content h2 {
@@ -129,7 +208,7 @@ h1 span {
     font-weight: 500;
     font-size: 1.6rem;
     letter-spacing: 2px;
-    transition: .2s;
+    transition: var(--tr);
 }
 
 #home .card:hover h2 {
@@ -137,7 +216,7 @@ h1 span {
 }
 
 #home .card p {
-    padding: 2rem 5rem;
+    padding: 2rem 2.5rem;
     line-height: 2;
     color: var(--text);
 }
@@ -152,9 +231,9 @@ h1 span {
     border: none;
     border: 2px solid var(--primary);
     text-align: center;
-    box-shadow: 0 5px 10px var(--shadow);
+    box-shadow: var(--bxs);
     cursor: pointer;
-    transition: .2s;
+    transition: var(--tr);
 }
 
 #home .card a:hover {
@@ -162,12 +241,12 @@ h1 span {
     color: var(--text);
     border: 2px solid var(--accent);
     box-shadow: none;
-    transition: .2s;
+    transition: var(--tr);
 }
 
 #home .card:hover {
     box-shadow: 0px var(--shadow);
-    transition: .2s;
+    transition: var(--tr);
 }
 
 #home .card .bottom {
@@ -200,14 +279,14 @@ h1 span {
     color: var(--text);
     text-align: left;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 #home #missions #missions-description p {
     padding: 3rem 2rem 2rem 2rem;
     font-size: 1.4rem;
-    font-weight: 500;
-    box-shadow: 0px 5px 10px var(--shadow);
+    font-weight: 300;
+    box-shadow: var(--bxs);
 }
 
 /* DETAILS */
@@ -227,12 +306,11 @@ h1 span {
     color: var(--background);
     user-select: none;
     cursor: pointer;    
-    letter-spacing: 2px;
 }
 
 #home #missions summary::before {
     position: absolute;
-    top: 1rem;
+    top: 1.2rem;
     left: 1rem;
     content: '';
     border-width: .6rem;
@@ -252,7 +330,7 @@ h1 span {
 }
 
 /* FINANCE SECTION */
-#home #missions #finance {
+#home #finance {
     height: 100%;
     width: 100%;
     padding: 0 3rem;
@@ -266,35 +344,36 @@ h1 span {
     text-align: center;
 }
 
-#home #missions #financial-organizations {
+#home #financial-organizations {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
 }
 
-#home #missions #financial-organizations img {
+#home #financial-organizations img {
     width: 35%;
     margin: 2rem 0 0 0;
 }
 
-#home #missions #finance #france, #home #missions #finance #europe {
+#home #finance #france, #home #finance #europe, #bpi {
     width: 40%;
-    min-height: 35vh;
+    min-height: 40vh;
     padding: 2rem;
-    box-shadow: 0px 5px 10px var(--shadow);
+    box-shadow: var(--bxs);
     font-weight: 600;
 }
 
 /* QUOTE SECTION */
 #home #quotes {
-    width: 60rem;
-    margin: 2rem auto;
-    height: 25rem;
+    width: 80vw;
+    margin: 5rem auto;
+    height: 80vh;
     display: flex;
     flex-wrap: wrap;
     background-color: var(--secondary);
     overflow: auto;
-    box-shadow: inset 0px 5px 10px var(--shadow);
+    box-shadow: inset var(--bxs);
 }
 
 #home .quote {
@@ -304,42 +383,48 @@ h1 span {
     display: grid;
     place-items: center;
     background-color: var(--background);
-    box-shadow: 0px 5px 10px var(--shadow);
-    transition: .2s;
+    box-shadow: var(--bxs);
+    transition: var(--tr);
+    cursor: pointer;
+}
+
+#home .quote:hover img {
+    box-shadow: 0px 10px 20px transparent;
 }
 
 #home .quote p {
     padding: 0 2rem 2rem 2rem;
     background-color: var(--background);
     color: var(--text);
-    text-align: center;
     line-height: 1.6;
     font-size: 1.2rem;
     font-weight: 300;
+    text-align: justify;
     font-style: italic;
 }
 
 #home .quote img {
-    width: 90%;
-    height: 90%;
-    box-shadow: 0 10px 20px var(--shadow);
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    box-shadow: var(--bxs);
+    transition: var(--tr);
+
 }
 
 #home .quote .backImg {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
 
     display: grid;
     place-items: center;
-    background: var(--linearPrimaryAccent);
+    background-color: transparent;
     transform: translateY(-3.5rem);
-    box-shadow: 0 .5rem 1rem var(--shadow);
-    transition: .2s;
+    box-shadow: var(--bxs);
+    transition: var(--tr);
 }
 
-#last-news .container small{
-    display: none;
-}
+
 
 /* |---------------------------ABOUT---------------------------| */
 #about {
@@ -413,24 +498,30 @@ h1 span {
 }
 
 /* PROJECT DETAILS */
-#about section {
+.about-project {
     height: auto;
     width: 90%;
     padding: 0 2vw;
     margin: 5vh 0;
-}
-
-#about section:nth-child(1) {
-    margin: 5vh;
-}
-
-#about section p {
+    color: var(--text);
+    border-left: 2px solid var(--primary);
     text-align: justify;
     padding: 0 2rem;
+    line-height: 2rem;
+    font-size: 1.2em;
 }
 
-#about p .word {
-    font-size: 2rem;   
+#about section:nth-child(1), #about section:nth-child(5), #about section:nth-child(6){
+    margin: 5vh;
+    border: none;
+}
+
+.highlight {
+    background: var(--linearPrimaryAccent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
 }
 
 /* TEAM DETAILS */
@@ -443,32 +534,46 @@ h1 span {
     gap: 2rem;
 }
 #about .member {
-    width: 20%;
+    box-shadow: var(--bxs);
+    width: 30%;
+    min-height: 70vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    box-shadow: 0 0.5rem 1rem var(--shadow);
-    padding: .5rem;
+    padding: 1.5rem;
+    gap: 2rem;
+}
+.member .image {
+    overflow: hidden;
+    width: 100%;
 }
 #about .member img {
     width: 100%;
+    transition: var(--tr);
+}
+#about .member:hover img {
+    transform: scale(1.3);
 }
 #about .member .member-infos {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--secondary);
+    gap: 1rem;
+    color: var(--text);
     width: 100%;
+    height: 100%;
 }
-#about .member-infos h3{
-    font-size: 2em;
-    background-color: var(--secondary);
+
+/* CONTACT */
+#contact, #contact a {
+    display: grid;
+    place-items: center;
 }
-#about .member-infos h4{
-    font-size: 1.5em;
-    background-color: var(--secondary);
+
+#contact img {
+    width: 70%;
 }
 
 /* |---------------------------PUBLICATIONS---------------------------| */
@@ -481,7 +586,7 @@ h1 span {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    transition: .2s;
+    transition: var(--tr);
 }
 
 .content {
@@ -490,10 +595,26 @@ h1 span {
     width: 140%;
     position: relative;
     color: var(--text);
-    font-size: 15px;
-    transition: .2s;
+    font-size: 1em;
+    transition: var(--tr);
+}
+.image {
+    aspect-ratio: 1;
+}
+.member-infos p {
+    font-size: 1em !important;
+    line-height: 1 !important;
+    text-align: center !important;
+    padding: 2rem 0 0 0;
 }
 
+.member-infos {
+    width: 10rem;
+}
+
+.member-infos h3 {
+    font-size: 1em !important;
+}
 .container .right-section a {
     width: 75%;
     padding: 1rem 4rem;
@@ -502,7 +623,7 @@ h1 span {
     text-align: center;
     border: 2px solid var(--primary);
     text-transform: uppercase;
-    transition: .2s;
+    transition: var(--tr);
 }
 
 .content p {
@@ -528,32 +649,32 @@ h1 span {
     border-top: 1rem solid transparent;
     border-bottom: 1rem solid transparent;
     border-right: 1rem solid var(--primary);
-    transition: .2s;
+    transition: var(--tr);
 }
 
 .container:hover .container-arrow {
     border-right: 0rem solid transparent;
     border-left: 1rem solid var(--primary);
-    transition: .2s;
+    transition: var(--tr);
 } 
 
 .container small {
     position: absolute;
 
     transform: translateX(-7rem);
-    transition: .2s;
+    transition: var(--tr);
 }
 
 .container:hover{
     transform: translateX(1rem);
-    box-shadow: 0 .5rem 1rem var(--shadow);
-    transition: .2s;
+    box-shadow: var(--bxs);
+    transition: var(--tr);
 }
 
 .container small {
     transform: translateX(-8rem);
     color: var(--primary);
-    transition: .2s;
+    transition: var(--tr);
 }
 
 .container a:hover  {
@@ -562,7 +683,7 @@ h1 span {
     color: var(--text);
     box-shadow: none;
     cursor: pointer;
-    transition: .2s;
+    transition: var(--tr);
 }
 
 .container .right-section {
@@ -582,6 +703,7 @@ h1 span {
 
 /* PUBLICATION PAGE -> SEARCH */
 #search-publication {
+    min-height: 100vh;
     padding: 25vh 15vw 0;
 }
 
@@ -653,13 +775,13 @@ h1 span {
     position: absolute;
     color: var(--text);
     transform: translateX(-7rem);
-    transition: .2s;
+    transition: var(--tr);
 }
 
 .container:hover small {
     transform: translateX(-8rem);
     color: var(--primary);
-    transition: .2s;
+    transition: var(--tr);
 }
 
 /* FOOTER */
@@ -694,14 +816,14 @@ footer p {
 
     cursor: pointer;
     z-index: 10;
-    transition: .2s;
+    transition: var(--tr);
 }
 
 .arrowTop path {
     fill: var(--background);
     stroke-width: .5rem;
     stroke: var(--text);
-    transition: .2s;
+    transition: var(--tr);
 }
 
 /* SCROLLBAR */
@@ -710,10 +832,13 @@ footer p {
 }
 
 #quotes::-webkit-scrollbar {
-    width: 15px;
+    width: 2rem;
+}
+#quotes::-webkit-scrollbar-track {
+    background-color: var(--text);
 }
 
-body::-webkit-scrollbar-track, #quotes::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
     background-color: var(--background);
 }
 

@@ -1,16 +1,21 @@
+<!-- 
+  * Author: Nathan Boisleux 2024 *
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/logos/oecq.svg" type="image/svg">
   </head>
   <body data-theme="light">
     <!-- HEADER -->
     <header>
       <nav>
         <ul>
+          <li><img src="./images/logos/oecq.svg" alt="logo OECQ"></li>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="publications.html">Publications</a></li>
@@ -19,17 +24,31 @@
       <button type="button" id="darkmode">Eco'Theme</button>
     </header>
 
+
+    <!-- MENU FOR MOBILE NAVIGATION -->
+    <div id="menu">
+      <button type="button" id="menu-toggle">Menu</button>
+      <ul id="mobile-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><button type="button" id="darkmodeMobile">Eco'Theme</button></li>
+      </ul>
+      <img src="./images/logos/oecq.svg" alt="logo OECQ">
+    </div>
+    
+
     <!-- SEARCH SECTION -->
     <main id="search-publication">
       <h1><span>Publications</span></h1>
       <div id="search">
         <label for="search-bar">Search by names</label>
-        <input type="search" id="search-bar" />
+        <input type="search" id="search-bar">
       </div>
       <!-- TIMELINE PUBLICATIONS SECTION -->
       <div id="timeline">
       </div>
-      <p id="error-message">Publication not found</p>        
+      <p id="error-message">Not found</p>        
     </main>
 
     <!-- FOOTER -->

@@ -1,11 +1,14 @@
+/*
+  * Author: Nathan Boisleux 2024 *
+*/
 header {
     width: 100%;
     height: 20vh;
-    padding: 0 1rem;
+    padding: 0 3rem;
 
     position: fixed;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     
     background-color: var(--background);
@@ -13,31 +16,38 @@ header {
     transition: .2s;
 }
 
+header nav {
+    background-color: transparent;
+}
+
 header nav ul {
     margin: auto;
-    
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5rem;
 }
 
 header nav ul li {
-    padding: 0 2.5rem;
+    width: 10rem;
 }
+
 /* LOGO */
-/* header nav ul li img {
-    width: 6rem;
-    margin: .2rem;
-    transition: .5s;
-} */
+
+header nav ul li:nth-child(1) img {
+    width: 60%;
+    background-color: transparent;
+}
+
 header nav ul li a {
     color: var(--text);
     font-weight: 500;
+    font-size: 1.3em;
     transition: .5s;
 }
 
 /* HEADER HOVER LINKS EFFECT */
-header nav ul li:nth-child(1) a,
+header nav ul li:nth-child(5) a,
 header nav ul li:nth-child(2) a,
 header nav ul li:nth-child(3) a,
 header nav ul li:nth-child(4) a{
@@ -48,7 +58,8 @@ header nav ul li:nth-child(4) a{
     box-shadow: inset 0 0 0 0 var(--text);
     transition: all .4s ease-in;
 }
-header nav ul li:nth-child(1) a:hover,
+
+header nav ul li:nth-child(5) a:hover,
 header nav ul li:nth-child(2) a:hover,
 header nav ul li:nth-child(3) a:hover,
 header nav ul li:nth-child(4) a:hover{
@@ -57,13 +68,18 @@ header nav ul li:nth-child(4) a:hover{
 }
 
 /* THEME BUTTON */
-header #darkmode {
-    padding: 1.25rem 2rem;
-
+header #darkmode, #menu ul li:nth-last-child(1) {
+padding: 1rem 2rem;
     color: var(--non-changeable-white);
     background: var(--linearPrimaryAccent);
     font-weight: 700;
     border: none;
     cursor: pointer;
     transition: .2s;
+}
+#menu ul li:nth-last-child(1) button {
+    border: none;
+    background-color:transparent;
+    cursor: pointer;
+    color: var(--non-changeable-white);
 }

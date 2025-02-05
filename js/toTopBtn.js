@@ -1,3 +1,6 @@
+/*
+  * Author: Nathan Boisleux 2024 *
+*/
 let topBtn = document.querySelector(".arrowTop")
 
 // calculate scroll value

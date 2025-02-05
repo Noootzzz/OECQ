@@ -1,3 +1,6 @@
+/*
+  * Author: Nathan Boisleux 2024 *
+*/
 // search publications
 function searchPublication(searchValue) {
     const publications = document.querySelectorAll(".container")
@@ -14,7 +17,7 @@ function searchPublication(searchValue) {
         }
     })
 
-     errorMsg.style.display = found ? "none" : "block"
+    errorMsg.style.display = found ? "none" : "block"
 }
 
 //search event on input

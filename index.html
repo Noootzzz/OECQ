@@ -1,37 +1,81 @@
+<!-- 
+  * Author: Nathan Boisleux 2024 *
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/logos/oecq.svg" type="image/svg">
   </head>
   <body data-theme="light">
     <!-- HEADER -->
     <header>
       <nav>
         <ul>
+          <li><img src="./images/logos/oecq.svg" alt="logo OECQ"></li>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="publications.html">Publications</a></li>
-          <li><a href="about.html#contact">Contact</a></li>
         </ul>
       </nav>
       <button type="button" id="darkmode">Eco'Theme</button>
     </header>
+
+    <!-- MENU FOR MOBILE NAVIGATION -->
+    <div id="menu">
+      <button type="button" id="menu-toggle">Menu</button>
+      <ul id="mobile-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><button type="button" id="darkmodeMobile">Eco'Theme</button></li>
+      </ul>
+      <img src="./images/logos/oecq.svg" alt="logo OECQ">
+    </div>
 
     <!-- MAIN -->
     <main id="home">
       <h1>OPTIMIZING THE <span>ENERGY</span> OF QUANTUM COMPUTING</h1>
       <!-- LOGOS SECTION -->
       <div id="logos">
-        <img src="./images/logos/edf.png" alt="logo EDF" />
-        <img src="./images/logos/a&b.png" alt="logo Alice & Bob" />
-        <img src="./images/logos/cnrs.png" alt="logo CNRS" />
-        <img src="./images/logos/quandela.png" alt="logo Quandela" />
-        <img src="./images/logos/QEI.png" alt="logo QEI#" />
+        <img src="./images/logos/edf.png" alt="logo EDF">
+        <img src="./images/logos/a&b.png" alt="logo Alice & Bob">
+        <img src="./images/logos/cnrs.png" alt="logo CNRS">
+        <img src="./images/logos/quandela.png" alt="logo Quandela">
+        <img src="./images/logos/qei.png" alt="logo QEI#">
       </div>
-      <!-- WHO SECTION -->
+      
+      <!-- HOME MISSIONS SECTION -->
+      <section id="missions">
+        <h2>Our missions</h2>
+        <div id="missions-description">
+          <details open>
+            <summary>Quantum Processors</summary>
+            <p>
+              Define, model and optimize the resource cost of the quantum
+              processors of Quandela and Alice&Bob, in real use cases proposed
+              by EDF, using the methodology developed by CNRS |QET>.
+            </p>
+          </details>
+          <details open>
+            <summary>Energetic Advantage</summary>
+            <p>
+              Define and research the conditions of an energetic advantage for
+              quantum computing compared to classical computing.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <!-- LATEST NEWS SECTION -->
+      <section id="last-news">
+        <h2>Our latest news</h2>
+      </section>
+      
+        <!-- WHO SECTION -->
       <section id="who">
         <h2>Who are we ?</h2>
         <!-- HOME PRESENTATION CARDS -->
@@ -46,7 +90,7 @@
             </div>
             <div class="bottom">
               <a href="https://www.edf.fr/">WebSite</a>
-              <img src="./images/logos/edf.png" alt="logo EDF" width="25%" />
+              <img src="./images/logos/edf.png" alt="logo EDF">
             </div>
           </div>
           <div class="card">
@@ -61,11 +105,7 @@
             </div>
             <div class="bottom">
               <a href="https://alice-bob.com/">WebSite</a>
-              <img
-                src="./images/logos/a&b.png"
-                alt="logo Alice&Bob"
-                width="30%"
-              />
+              <img src="./images/logos/a&b.png" alt="logo Alice&Bob">
             </div>
           </div>
           <div class="card">
@@ -81,7 +121,7 @@
             </div>
             <div class="bottom">
               <a href="https://quantum-energy-team.cnrs.fr/">WebSite</a>
-              <img src="./images/logos/cnrs.png" alt="logo CNRS" width="20%" />
+              <img src="./images/logos/cnrs.png" alt="logo CNRS">
             </div>
           </div>
           <div class="card">
@@ -95,11 +135,7 @@
             </div>
             <div class="bottom">
               <a href="https://www.quandela.com/">WebSite</a>
-              <img
-                src="./images/logos/quandela.png"
-                alt="logo Quandela"
-                width="30%"
-              />
+              <img src="./images/logos/quandela.png" alt="logo Quandela">
             </div>
           </div>
           <div class="card">
@@ -114,92 +150,112 @@
             </div>
             <div class="bottom">
               <a href="https://quantum-energy-initiative.org/">WebSite</a>
-              <img src="./images/logos/QEI.png" alt="logo QEI#" width="20%" />
+              <img src="./images/logos/qei.png" alt="logo QEI#">
             </div>
           </div>
         </div>
       </section>
-
-      <!-- HOME MISSIONS SECTION -->
-      <section id="missions">
-        <h2>Our missions</h2>
-        <div id="missions-description">
-          <details open>
-            <summary>Quantum Processors</summary>
-            <p>
-              Define, model and optimize the resource cost of the quantum
-              processors of Quandela and Alice&Bob, in real use cases proposed
-              by EDF, using the methodology developed by CNRS |QET>.
-            </p>
-          </details>
-          <details>
-            <summary>Energetic Advantage</summary>
-            <p>
-              Define and research the conditions of an energetic advantage for
-              quantum computing compared to classical computing.
-            </p>
-          </details>
-        </div>
-        <!-- FINANCE SECTION -->
-        <section id="finance">
-          <h2>This project was financed by</h2>
-          <div id="financial-organizations">
-            <div id="france">
-              <p>The French State as part of France 2030.</p>
-              <img src="./images/logos/fr2030.png" alt="France-2030 logo" />
-            </div>
-            <div id="europe">
-              <p>
-                The European Union - Next Generation EU as part of the France
-                Relance plan.
-              </p>
-              <img src="./images/logos/eu.jpg" alt="European Union logo" />
-            </div>
-          </div>
-        </section>
-      </section>
+      
       <!-- QUOTES SECTION -->
       <div id="quotes">
         <div class="quote">
           <div class="backImg">
             <img
-              src="./images/avatar.png"
-              alt="avatar"
-              width="100px"
-              height="100px"
-            />
+              src="./images/avatars/JM.jpeg"
+              alt="avatar">
           </div>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio
-            exercitationem, explicabo dolor illo neque necessitatibus. Maxime
-            officia ipsum nisi, enim debitis pariatur, culpa molestias
-            excepturi, ipsam commodi saepe consectetur. Voluptatibus. lorem
+            “The responsible use of digital technologies
+             is an EDF Group initiative. Since 2018, EDF
+              has been involved in evaluating the benefits
+               of quantum for our businesses. In addition to
+                the computational advantage, we consider the
+                 energy advantage to be one of the key benefits
+                  of this technology.” <br><strong>said Joseph Mikael, Head of Quantum Computation.</strong>
           </p>
         </div>
         <div class="quote">
           <div class="backImg">
             <img
-              src="./images/avatar.png"
+              src="./images/avatars/AA.jpg"
               alt="avatar"
-              width="100px"
-              height="100px"
-            />
+            >
           </div>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio
-            exercitationem, explicabo dolor illo neque necessitatibus. Maxime
-            officia ipsum nisi, enim debitis pariatur, culpa molestias
-            excepturi, ipsam commodi saepe consectetur. Voluptatibus. lorem
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
-            natus, dolores ipsa temporibus illum ab explicabo inventore delectus
-            rerum, nihil blanditiis fuga soluta deleniti. Officia nam laboriosam
-            ratione ducimus! A.
+            “As co-founders of the Quantum Energy Initiative,
+             our CNRS team is extremely excited by OECQ, which
+              is the first large project devoted to the exploration
+               of a quantum energetic advantage in real quantum
+                computers. It will consolidate the lead of France
+                 on quantum energetics and bring into existence a
+                  new way of practicing responsible innovation, which
+                   takes into account the fact that energetic resources
+                    are finite.”  <br><strong>said Alexia Auffèves, CNRS Senior Scientist.</strong>
           </p>
         </div>
+
+        <div class="quote">
+          <div class="backImg">
+            <img
+              src="./images/avatars/TP.jpg"
+              alt="avatar"
+            >
+          </div>
+          <p>
+            “One of the primary objectives of the OECQ project
+             is to seize the opportunity to develop quantum
+              computing technology in an energy-efficient manner
+               from the outset, as quantum computing is still in its nascent
+                 stages, this project will dimension the future energy
+                  infrastructures that will support mature quantum technology.
+                   Additionally, since energy consumption is a key cost driver
+                    in quantum tech, making these processes more efficient offers
+                     a significant competitive advantage.” <br><strong>said Théau Peronnin, CEO of Alice
+                      & Bob.</strong>
+          </p>
+        </div>
+
+        <div class="quote">
+          <div class="backImg">
+            <img
+              src="./images/avatars/NS.jpg"
+              alt="avatar"
+            >
+          </div>
+          <p>
+            "We recognize that energy efficiency is paramount
+             in the development of quantum computing technology,as we push
+               the boundaries of what is possible, it's crucial that
+                we do so in a sustainable manner.” <br><strong>said Niccolo Somaschi, CEO of Quandela.</strong>
+          </p>
+        </div>
+
       </div>
-      <!-- LATEST NEWS SECTION -->
-      <section id="last-news">
-        <h2>Our latest news</h2>
+      
+
+
+      <!-- FINANCE SECTION -->
+      <section id="finance">
+        <h2>This project was financed by</h2>
+        <div id="financial-organizations">
+          <div id="france">
+            <p>The French State as part of France 2030.</p>
+            <img src="./images/logos/fr2030.png" alt="France-2030 logo">
+          </div>
+          <div id="europe">
+            <p>
+              The European Union - Next Generation EU as part of the France
+              Relance plan.
+            </p>
+            <img src="./images/logos/eu.jpg" alt="European Union logo">
+          </div>
+          <div id="bpi">
+            <p>
+              The French Public Investment bank.
+            </p>
+            <img src="./images/logos/bpi.png" alt="BPIFrance logo">
+          </div>
+        </div>
       </section>
     </main>
 
@@ -234,10 +290,5 @@
     <script src="./js/datasPublicationsReader.js"></script>
     <!-- footer dynamic year -->
     <script src="./js/date.js"></script>
-
-    <!-- lenis for smooth scroll -->
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
-    <!-- smoothScroll using lenis -->
-    <script src="./js/smoothScroll.js"></script>
   </body>
 </html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 501 251">
+  <defs>
+    <linearGradient id="Dégradé_sans_nom_35" data-name="Dégradé sans nom 35" x1="120.5" y1="348.5" x2="380.5" y2="88.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <rect id="BACKGROUND" x=".5" y=".5" width="500" height="250" style="fill: #0028ad; stroke: #0028ad; stroke-miterlimit: 10;"/>
+  <text transform="translate(36.9 181.71)" style="fill: #fff; font-family: REM-Medium, REM; font-size: 146px; font-variation-settings: &apos;wght&apos; 500; font-weight: 500;"><tspan x="0" y="0">OE</tspan><tspan x="214.33" y="0" style="letter-spacing: -.03em;">C</tspan><tspan x="308.5" y="0">Q</tspan></text>
+  <rect x=".5" y="208.5" width="500" height="20" style="fill: url(#Dégradé_sans_nom_35); stroke-width: 0px;"/>
+  <rect x="303.93" y="201.46" width="18.14" height="34.09" transform="translate(60.46 -67.74) rotate(13.66)" style="fill: #0028ad; stroke-width: 0px;"/>
+  <rect x="258.93" y="201.46" width="18.14" height="34.09" transform="translate(59.18 -57.11) rotate(13.66)" style="fill: #0028ad; stroke-width: 0px;"/>
+  <rect x="343.93" y="201.46" width="18.14" height="34.09" transform="translate(61.59 -77.19) rotate(13.66)" style="fill: #0028ad; stroke-width: 0px;"/>
+  <rect x="380.93" y="201.46" width="18.14" height="34.09" transform="translate(62.63 -85.92) rotate(13.66)" style="fill: #0028ad; stroke-width: 0px;"/>
+  <rect x="415.93" y="201.46" width="18.14" height="34.09" transform="translate(63.62 -94.19) rotate(13.66)" style="fill: #0028ad; stroke-width: 0px;"/>
+  <rect x="448.93" y="201.46" width="18.14" height="34.09" transform="translate(64.56 -101.98) rotate(13.66)" style="fill: #0028ad; stroke-width: 0px;"/>
+  <polyline points="500.5 230.73 497.53 242.94 475.05 237.48 485.32 195.24 500.5 198.93" style="fill: #0028ad; stroke-width: 0px;"/>
+</svg>

@@ -1,0 +1,264 @@
+/*
+  * Author: Nathan Boisleux 2024 *
+*/
+/* RESPONSIVE STYLES */
+@media screen and (max-width: 1200px) {
+    header nav ul {
+        gap: 3rem;
+    }
+
+    header nav ul li {
+        width: 7rem;
+    }
+
+    header nav ul li:nth-child(1) img {
+        width: 100%;
+        background-color: transparent;
+    }
+
+    header #darkmode {
+        width: 7rem;
+        height: 3rem;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    header nav ul {
+        gap: 1.5rem;
+    }
+
+    header nav ul li {
+        width: 5rem;
+    }
+
+    header nav ul li:nth-child(1) img {
+        width: 100%;
+        background-color: transparent;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* HOME PAGE */
+    body #home {
+        padding: 7vh 0;
+    }
+
+    #home h1 {
+        font-size: 1.4em;
+        padding: 0 2rem;
+        text-align: center;
+    }
+
+    body #home section>h2,
+    body #about h2 {
+        font-size: 2em;
+        padding: 0 1rem;
+    }
+
+    header {
+        display: none;
+    }
+
+    body #menu {
+        display: flex;
+    }
+
+    body #home #logos {
+        height: 7rem;
+        gap: 1rem;
+        padding: 0;
+    }
+
+    body #home #missions #missions-description {
+        padding: 0;
+        font-size: 1em;
+    }
+
+    body #home #missions details {
+        width: 90%;
+    }
+
+    body #home #missions summary {
+        padding: 1rem 2rem;
+    }
+
+    body #home #last-news {
+        width: 100%;
+    }
+
+    body #home #last-news .container {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    body #home #last-news .container .content {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    body .container .right-section {
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    body .container .right-section a {
+        padding: 1rem 2rem;
+    }
+
+    body #home #last-news .container:hover {
+        transform: translateX(.5rem);
+    }
+
+    body #home #cards {
+        gap: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body #home #cards .card {
+        gap: 2rem;
+        width: 90%;
+    }
+
+    body #home .quote .backImg {
+        width: 100px;
+        height: 100px;
+    }
+
+    body #home .card p {
+        padding: 0;
+        font-size: .9em;
+    }
+
+    body #home #quotes .quote {
+        width: 90%;
+    }
+
+    body #home #quotes .quote p {
+        padding: 0 .5rem;
+        font-size: .6rem;
+        text-align: justify;
+        line-height: 1.5;
+    }
+
+    body #quotes::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    #home #financial-organizations {
+        flex-direction: column;
+    }
+
+    body #home #finance #france,
+    body #home #finance #europe,
+    body #bpi {
+        width: 100%;
+        min-height: 30vh;
+    }
+
+    body #home #finance {
+        padding: 1rem;
+        font-size: 1em;
+    }
+
+    /* ABOUT PAGE */
+    body #about {
+        padding: 0;
+    }
+
+    body #about #map-locations,
+    body #about #map-locations #map-img {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        margin: 2vh 2vh 20vh;
+    }
+
+    #about .marker span {
+        padding: .1rem .2rem;
+        font-size: .6rem;
+        left: -35px;
+        top: 230%;
+    }
+
+    #about .about-project {
+        margin: 2vh 0 5vh;
+        line-height: 1.3;
+        font-size: 1em;
+        width: 95%;
+        padding: 0 1rem;
+    }
+
+    body #about section:nth-child(1),
+    body #about section:nth-child(5),
+    body #about section:nth-child(6) {
+        margin: 2vh;
+    }
+
+    body #about #members {
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    body #about #members .member {
+        font-size: 1em;
+        min-width: 80%;
+        text-align: center;
+    }
+
+    /* PUBLICATION */
+    body #search-publication {
+        padding: 5rem 2rem;
+    }
+
+    body #search-publication small {
+        display: none;
+    }
+
+    body #search-publication .container {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    body #search-publication .container .right-section a {
+        font-size: 1em;
+        padding: .5rem;
+        white-space: nowrap;
+    }
+
+    body #search-publication .container .content {
+        width: 100%;
+        text-align: center;
+    }
+
+    body #search-publication h1 {
+        font-size: 3em;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    body #about #map-locations,
+    body #about #map-locations #map-img {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 2vh;
+    }
+
+    body .content .container-arrow {
+        display: none;
+    }
+
+    body #search-publication h1 {
+        font-size: 2em;
+    }
+}

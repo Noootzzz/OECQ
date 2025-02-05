@@ -1,29 +1,44 @@
+<!-- 
+  * Author: Nathan Boisleux 2024 *
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/logos/oecq.svg" type="image/svg">
   </head>
   <body data-theme="light">
     <!-- HEADER -->
     <header>
       <nav>
         <ul>
+          <li><img src="./images/logos/oecq.svg" alt="logo OECQ"></li>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="publications.html">Publications</a></li>
-          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <button type="button" id="darkmode">Eco'Theme</button>
     </header>
+    <!-- MENU FOR MOBILE NAVIGATION -->
+    <div id="menu">
+      <button type="button" id="menu-toggle">Menu</button>
+      <ul id="mobile-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><button type="button" id="darkmodeMobile">Eco'Theme</button></li>
+      </ul>
+      <img src="./images/logos/oecq.svg" alt="logo OECQ">
+    </div>
     <!-- ABOUT SECTION -->
     <main id="about">
       <!-- MAP WITH MARKERS -->
       <section id="map-locations">
-        <h2>Partners location</h2>
+        <h2>Location of partners</h2>
         <div id="map-img">
           <img src="./images/map.png" alt="map">
           <div class="marker france">
@@ -34,77 +49,117 @@
           </div>
         </div>
       </section>
-      <section id="first-project-details">
-        <p data-base-color="var(--secondary)" data-new-color="var(--primary)">
-          At the heart of our project lies sustainable development, with the ambition to create energy-efficient quantum
-          computers that offer a significant energy advantage over conventional computing systems. Alice&Bob and Quandela, 
-          in partnership with EDF, are committed to this first step towards environmentally friendly quantum computing.
-        </p>
-      </section>
-      <section id="second-project-details">
-        <p data-base-color="var(--secondary)" data-new-color="var(--primary)">
-          Our scalable MNR methodology is designed to optimize the use of non-energy resources, underscoring our commitment 
-          to sustainable and responsible technology. Made in France, our project comes to life through local expertise: 
-          Alice&Bob exclusively manufactures its chips in France, while Quandela has inaugurated its first assembly 
-          plant in Massy. Our processors are shaped at CEA-Leti in Grenoble, and our photon sources come from C2N in Palaiseau.
-        </p>
-      </section>
-      <section id="third-project-details">
-        <p data-base-color="var(--secondary)" data-new-color="var(--primary)">
-          The lifecycle management of quantum computers is at the forefront of our concerns. Energy optimization affects 
-          all computer components, reducing the material footprint and promoting a future where technology advances in
-          tandem with the preservation of our planet.
-        </p>
-      </section>
-      <section id="team">
+      <p class="about-project">
+        The French electric utility company <span class="highlight">EDF</span>, along with quantum computing companies <span class="highlight">Quandela</span> and <span class="highlight">Alice & Bob</span>, and the <span class="highlight">French National Centre for Scientific Research (CNRS)</span>, have joined forces in an innovative project to optimize energy consumption in quantum computing.  
+        <br>
+        The project, named <span class="highlight">"Optimisation Energétique de Circuits Quantiques" (OECQ)</span>, seeks to compare the energy requirements of solving relevant industry use-cases on classical high-performance computing (HPC) systems versus quantum systems and their enabling technologies, providing the first measurement of energy efficiency for the full stack of a real quantum computer. 
+      </p>      
+      <p class="about-project">
+        The <span class="highlight">OECQ</span> project addresses a crucial question: can quantum computers be a more energy-efficient alternative to classical HPC systems? <br> To address this question, the project will estimate the energy consumption of a full stack quantum computer on computationally and energy intensive industry-relevant problems in optimisation, physical simulation and material science. The optimisation of the energy performance of current quantum processors with long term use-cases in mind seeks an eventual quantum energy advantage, where quantum computing is energetically more favourable than classical methods. This is fundamentally different from the habitual resolution speed advantage expected from quantum technologies. 
+      </p>      
+      <p class="about-project">
+        More precisely the project will be articulated as follows: 
+        <br>
+        - <span class="highlight">EDF</span> identifies the relevant, energy-hungry, use cases for which a resource comparison will be run, and measures the energy requirements to solve such use cases with classical HPCs. 
+        <br>
+        - Quantum hardware players <span class="highlight">Alice & Bob</span> and <span class="highlight">Quandela</span> will estimate the energy budget that a quantum algorithm would require for the same use cases if solved using current quantum systems. 
+        <br>
+        - <span class="highlight">Alice & Bob</span> and <span class="highlight">Quandela</span> will then leverage the insights gained to build and test new, more energy-efficient quantum processor prototypes, demonstrating that energy needs can be reduced.  
+        <br>
+        - Throughout the whole project <span class="highlight">CNRS</span> will ensure methodological excellence and compute the theoretical bounds for energy consumption. 
+      </p>
+        <section id="team">
         <h2>Our Team</h2>
         <div id="members">
           <div class="member">
-            <img src="./images/avatar.png" alt="avatar">
+            <div class="image">
+              <img src="./images/avatars/AA.jpg" alt="avatar">
+            </div>
             <div class="member-infos">
-              <h3>Name</h3>
-              <h4>Job</h4>
+              <h3>Alexia Auffèves</h3>
+              <p>CNRS Senior Scientist</p>
             </div>
           </div>
+
           <div class="member">
-            <img src="./images/avatar.png" alt="avatar">
+            <div class="image">
+              <img src="./images/avatars/PEE.jpg" alt="avatar">
+            </div>
             <div class="member-infos">
-              <h3>Name</h3>
-              <h4>Job</h4>
+              <h3>Pierre-Emmanuel Emeriau</h3>
+              <p>Leads the Quantum Algorithms team at Quandela</p>
             </div>
           </div>
+
           <div class="member">
-            <img src="./images/avatar.png" alt="avatar">
+            <div class="image">
+              <img src="./images/avatars/SM.png" alt="avatar">
+            </div>
             <div class="member-infos">
-              <h3>Name</h3>
-              <h4>Job</h4>
+              <h3>Shane Mansfield</h3>
+              <p>is Chief Research Officer and late founder at Quandela</p>
             </div>
           </div>
+
           <div class="member">
-            <img src="./images/avatar.png" alt="avatar">
+            <div class="image">
+              <img src="./images/avatars/JM.jpeg" alt="avatar">
+            </div>
             <div class="member-infos">
-              <h3>Name</h3>
-              <h4>Job</h4>
+              <h3>Joseph Mikael</h3>
+              <p>Head of Quantum Computation</p>
             </div>
           </div>
+
           <div class="member">
-            <img src="./images/avatar.png" alt="avatar">
+            <div class="image">
+              <img src="./images/avatars/TP.jpg" alt="avatar">
+            </div>
             <div class="member-infos">
-              <h3>Name</h3>
-              <h4>Job</h4>
+              <h3>Théau Peronnin</h3>
+              <p>CEO of Alice & Bob</p>
             </div>
           </div>
+
           <div class="member">
-            <img src="./images/avatar.png" alt="avatar">
+            <div class="image">
+              <img src="./images/avatars/NS.jpg" alt="avatar">
+            </div>
             <div class="member-infos">
-              <h3>Name</h3>
-              <h4>Job</h4>
+              <h3>Niccolo Somaschi</h3>
+              <p>CEO of Quandela</p>
             </div>
           </div>
+
+          <div class="member">
+            <div class="image">
+              <img src="./images/avatars/JS.jpg" alt="avatar">
+            </div>
+            <div class="member-infos">
+              <h3>Jeremy Stevens</h3>
+              <p>Technology Development Lead at Alice & Bob</p>
+            </div>
+          </div>
+
+          <div class="member">
+            <div class="image">
+              <img src="./images/avatars/RW.png" alt="avatar">
+            </div>
+            <div class="member-infos">
+              <h3>Robert Whitney</h3>
+              <p>Researcher, QEI cofounder CNRS LPMMC</p>
+            </div>
+          </div>
+          
+          
         </div>
       </section>
       <section id="contact">
+        <h2>Contact Us</h2>
+        <div id="linkedin">
 
+          <a href="https://www.linkedin.com/groups/14475019/"><img src="./images/logos/linkedin.png" alt="linkedin logo"></a>
+        </div>
       </section>
     </main>
 
@@ -131,11 +186,6 @@
     <!-- JAVASCRIPT IMPORTS -->
     <!-- header swap on scroll -->
     <script src="./js/header.js"></script>
-    <!-- GSAP scroll text animation -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/split-type"></script>
-    <script src="./js/gsapAnimations.js"></script>
     <!-- darkmode -->
     <script src="./js/darkMode.js"></script>
     <!-- to top button arrow -->
@@ -149,35 +199,3 @@
     <script src="./js/smoothScroll.js"></script>
   </body>
 </html>
-
-<!-- At the heart of our project lies sustainable development, with the ambition to create energy-efficient quantum
-  computers that offer a significant energy advantage over conventional computing systems. Alice&Bob and Quandela, 
-  in partnership with EDF, are committed to this first step towards environmentally friendly quantum computing, which does not rely on critical materials and significantly reduces cryostat consumption.
-
-Our scalable MNR methodology is designed to optimize the use of non-energy resources, underscoring our commitment 
-to sustainable and responsible technology. Made in France, our project comes to life through local expertise: 
-Alice&Bob exclusively manufactures its chips in France, while Quandela has inaugurated its first assembly
- plant in Massy. Our processors are shaped at CEA-Leti in Grenoble, and our photon sources come from C2N in Palaiseau.
-
-The lifecycle management of quantum computers is at the forefront of our concerns. Energy optimization affects 
-all computer components, reducing the material footprint and promoting a future where technology advances in
- tandem with the preservation of our planet. Join us in this quantum revolution, where performance goes hand
-  in hand with environmental awareness. -->
-
-
-<!-- Au cœur de notre projet se trouve le développement durable, avec l’ambition de créer des ordinateurs 
- quantiques à haute efficacité énergétique, offrant un avantage énergétique significatif par rapport aux
-  systèmes informatiques conventionnels. Alice&Bob et Quandela, en partenariat avec EDF, s’engagent dans 
-  cette première étape vers une informatique quantique respectueuse de l’environnement, ne dépendant pas 
-  de matériaux critiques et réduisant considérablement la consommation des cryostats.
-
-Notre méthodologie MNR extensible est conçue pour optimiser l’utilisation des ressources non énergétiques, 
-soulignant notre engagement envers une technologie durable et responsable. Fabriqué en France, notre projet
- prend vie grâce à l’expertise locale : Alice&Bob fabrique ses puces exclusivement en France, tandis que
-  Quandela inaugure sa première usine d’assemblage à Massy. Nos processeurs prennent forme au CEA-Leti de
-   Grenoble et nos sources de photons émanent du C2N à Palaiseau.
-
-La gestion du cycle de vie des ordinateurs quantiques est au premier plan de nos préoccupations.
- L’optimisation énergétique influence tous les composants de l’ordinateur, réduisant l’empreinte 
- matérielle et favorisant un avenir où la technologie avance de pair avec la préservation de notre planète. 
- Rejoignez-nous dans cette révolution quantique, où performance rime avec conscience environnementale. -->
